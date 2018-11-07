@@ -22,61 +22,11 @@ import java.util.Map;
 
 public class NetworkCommunicationInteractor implements NetworkResponseListener {
 
-    private NetworkCommunicationModel finalResponse;
     private String TAG = "VerifyUserImpl";
     private onResponseListener responseListener;
     private String apiName = "", finalParams = "", signature = "";
     private Context context = null;
 
-//    private io.reactivex.Observable<NetworkCommunicationModel> getObservable() {
-//        if (!finalParams.equals("") && !signature.equals("")) {
-//            NetworkCommunicationModel para = new NetworkCommunicationModel();
-//            para.setParams(finalParams);
-//            para.setSignature(signature);
-//            return RetrofitClient.getRetrofitClient()
-//                    .create(NetworkCalls.class)
-//                    .getResponse(apiName, para)
-//                    .subscribeOn(Schedulers.io())
-//                    .observeOn(AndroidSchedulers.mainThread()
-//                    );
-//        }
-//        return null;
-//    }
-//
-//    private DisposableObserver<NetworkCommunicationModel> getObserver() {
-//
-//        return new DisposableObserver<NetworkCommunicationModel>() {
-//            @Override
-//            public void onNext(@NonNull NetworkCommunicationModel response) {
-//                finalResponse = response;
-//            }
-//
-//            @Override
-//            public void onError(@NonNull Throwable e) {
-//                responseListener.onFailure(e.getMessage());
-//            }
-//
-//            @Override
-//            public void onComplete() {
-//                try {
-//                    if ((!finalResponse.equals("")) && responseListener != null) {
-//                        new Handler().post(() -> {
-//                            // add your code here
-//                            try {
-//                                // String decStr = decryptString(finalResponse.getParams(), BuildConfig.ENC_DEC_KEY);
-//                                responseListener.onSuccess("Sdfsdf");
-//                            } catch (Exception e) {
-//                                Log.d(TAG, e.getMessage());
-//                            }
-//                        });
-//                    }
-//
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        };
-//    }
 
     @SuppressLint("HardwareIds")
     @Override
@@ -110,11 +60,7 @@ public class NetworkCommunicationInteractor implements NetworkResponseListener {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-//            pDialog = new ProgressDialog(context.getApplicationContext());
-//            pDialog.setMessage("Getting Data ...");
-//            pDialog.setIndeterminate(false);
-//            pDialog.setCancelable(true);
-//            pDialog.show();
+
         }
 
         @Override

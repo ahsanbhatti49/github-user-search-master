@@ -1,5 +1,6 @@
 package com.test.ahsan.app.view.activities;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -29,39 +30,11 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                 .commit();
     }
 
-//    /*
-//   *  Interation between fragments and Main Activity
-//   */
-//    @Subscribe(threadMode = ThreadMode.MAIN)
-//    public void onMessageEvent(EventBussResponse event) {
-//        int fragmentId = event.getResultCode();
-//        switch (fragmentId) {
-//            case AppConstants.GOTO_FRAGMENT:
-//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction
-//                        .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_from_left, R.anim.pop_enter, R.anim.pop_exit)
-//                        .add(R.id.mainFrameLayout, event.getFragment(), event.getIntent().getStringExtra("tag"))
-//                        .addToBackStack(null)
-//                        .commit();
-//                break;
-////            case AppConstants.GOTO_FRAGMENT:
-////                try {
-////                    Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.mainFrameLayout);
-////                    int fragmentCount = getSupportFragmentManager().getBackStackEntryCount();
-////                    if (fragment instanceof HomeFragment || fragmentCount == 0) {
-////                        return;
-////                    } else {
-////                        int loopThrough = fragmentCount - 1;
-////                        for (int i = 0; i <= loopThrough; i++) {
-////                            getSupportFragmentManager().popBackStackImmediate();
-////                        }
-////                    }
-////                } catch (Exception e) {
-////                }
-////                break;
-//        }
-//    }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    }
 
     @Override
     public void onFragmentInteraction(Bundle bundle) {
