@@ -15,8 +15,5 @@ public interface NetworkCalls {
     @GET("discover/movie")
     Observable<String> getMovies(@Query("api_key") String api_key,
                                  @Query("page") int page);
-    @POST("/abl/public/{path}")
-    Observable<NetworkCommunicationModel> getResponse(@Path(value = "path", encoded = true) String path,
-                                                      @Body NetworkCommunicationModel params);
 
 }

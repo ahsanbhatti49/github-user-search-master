@@ -1,22 +1,5 @@
 apply plugin: 'com.android.application'
-//
-//android {
-//    compileSdkVersion 27
-//    defaultConfig {
-//        applicationId "com.finja.abl.wallet"
-//        minSdkVersion 23
-//        targetSdkVersion 27
-//        versionCode 1
-//        versionName "1.0"
-//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-//    }
-//    buildTypes {
-//        release {
-//            minifyEnabled false
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-//        }
-//    }
-//}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -26,10 +9,6 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
 
-        buildConfigField "String", "ENC_DEC_KEY", "\"tytyhnmjkloiubvx%6\$#7*&*9):?><:p\""
-        buildConfigField "String", "ENC_DEC_KEY_FOR_CONTACTS", "\"kainoijuniwahjed\""
-        buildConfigField "String", "PASSWORD_ATTENDANCE", "\"a1lkj@4ds5ixm4\""
-        buildConfigField "String", "PREF_KEY_ENC_DEC_KEY", "\"new_key_prefs_otp\""
 
         // Enabling multi dex support.
         multiDexEnabled true
@@ -52,64 +31,20 @@ android {
 
     }
 
-    productFlavors {
-        uat {
-            //For demo
-            versionCode rootProject.ext.codeDemo
-            versionName rootProject.ext.nameDemo
-            applicationId "com.finja.abl.wallet.test"
-
-            buildConfigField "String", "APP_NAME", "\"UAT My Abl Wallet\""
-            // Fire base force update check version
-            buildConfigField "String", "CURRENT_APP_VERSION", "\"29\""
-            buildConfigField "String", "CURRENT_APK_FOR", "\"Demo\""
-            buildConfigField "String", "BASE_URL", "\"https://api.github.com\""
-            buildConfigField "String", "MERCAHNT_URL", "\"http://devmerchant.finpay.pk/public/api/\""
-            buildConfigField "String", "ATTENDANCE_URL", "\"http://devpayrollplus.finpay.pk/public/api/\""
-            buildConfigField "String", "GOOGLE_MAPS_KEY", "\"AIzaSyD6TEpFbX4Zm96Zj5WbBmAWtt6wWAgjQFo/\""
-            buildConfigField "String", "HASH_ALGO", "\"SHA-512\""
-
-            manifestPlaceholders = [facebook_app_id         : "396298997427510",
-                                    app_name                : "UAT Abl",
-                                    google_maps_key         : "AIzaSyD6TEpFbX4Zm96Zj5WbBmAWtt6wWAgjQFo",
-                                    fb_login_protocol_scheme: "fb396298997427510"]
-        }
-
-        live {
-            //For Live
-            versionCode rootProject.ext.codeLive
-            versionName rootProject.ext.nameLive
-            applicationId "com.finja.abl.wallet"
-
-            buildConfigField "String", "APP_NAME", "\"My Abl Wallet\""
-            buildConfigField "String", "CURRENT_APP_VERSION", "\"29\""
-            buildConfigField "String", "CURRENT_APK_FOR", "\"Production\""
-            buildConfigField "String", "SIMSIM_URL", "\"https://api.finca.org.pk/\""
-            buildConfigField "String", "MERCAHNT_URL", "\"https://merchant.finpay.pk/public/api/\""
-            buildConfigField "String", "ATTENDANCE_URL", "\"https://payrollplus.finpay.pk/public/api/\""
-            buildConfigField "String", "GOOGLE_MAPS_KEY", "\"AIzaSyA1yLjdOTNgUskUwsixgyIgVwPCjwFu4Mw/\""
-            manifestPlaceholders = [facebook_app_id         : "1005915782852112",
-                                    app_name                : "Abl Pakistan",
-                                    google_maps_key         : "AIzaSyA1yLjdOTNgUskUwsixgyIgVwPCjwFu4Mw",
-                                    fb_login_protocol_scheme: "fb1005915782852112"]
-        }
-
-    }
 
     buildTypes {
         release {
             minifyEnabled true
             useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            productFlavors.uat
-            productFlavors.live
+
         }
 
         debug {
             minifyEnabled false
             useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            productFlavors.uat
+
         }
     }
     repositories {
