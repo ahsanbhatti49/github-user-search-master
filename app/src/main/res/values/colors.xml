@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Font Colors-->
+
+    <color name="primaryFont">#333333</color>
+    <color name="secondaryFont">#B3333333</color>
+    <color name="disabledFont">#80333333</color>
+    <color name="linksFont">#0070BF</color>
+
+    <color name="successFont">#2E7D32</color>
+    <color name="errorFont">#B71C1C</color>
+    <color name="warningFont">#f3a50C</color>
+    <color name="casaFont">#FECA00</color>
+    <color name="tradeFinanceText">#09A276</color>
+    <color name="white">#ffffff</color>
+
+
+    <!--transparance or opacity in colors-->
+
+    <!--Adding Opacity/transparancy-->
+
+    <!--100% — FF-->
+    <!--95% — F2-->
+    <!--90% — E6-->
+    <!--85% — D9-->
+    <!--80% — CC-->
+    <!--75% — BF-->
+    <!--70% — B3-->
+    <!--65% — A6-->
+    <!--60% — 99-->
+    <!--55% — 8C-->
+    <!--50% — 80-->
+    <!--45% — 73-->
+    <!--40% — 66-->
+    <!--35% — 59-->
+    <!--30% — 4D-->
+    <!--25% — 40-->
+    <!--20% — 33-->
+    <!--15% — 26-->
+    <!--10% — 1A-->
+    <!--5% — 0D-->
+    <!--0% — 00-->
+
+</resources>
